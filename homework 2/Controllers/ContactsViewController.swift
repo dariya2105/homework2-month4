@@ -42,7 +42,7 @@ class ContactsViewController: UIViewController {
         if UIScreen.main.nativeBounds.height <= 2340 { // iPhone SE
             logoLbl.topAnchor.constraint(equalTo: view.topAnchor, constant: 26).isActive = true
         } else {
-            logoLbl.topAnchor.constraint(equalTo: view.topAnchor, constant: 55).isActive = true
+            logoLbl.topAnchor.constraint(equalTo: view.topAnchor, constant: 65).isActive = true
         }
         logoLbl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
@@ -73,24 +73,27 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.detailTextLabel?.text = contacts[(indexPath.row)].phoneNumber
         cell.imageView?.image = UIImage(named: contacts[indexPath.row].imageContact)
         cell.detailTextLabel?.textColor = UIColor.gray
-        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
-        
+        cell.imageView?.layer.cornerRadius = 32
+        cell.imageView?.clipsToBounds = true
+        tableView.rowHeight = 64
+        //cell.separatorInset = UIEdgeInsets(top: 30, left: 90, bottom: 40, right: 0)
         return cell
     }
 
     
     private func setData() {
         contacts = [
-            Contact(imageContact: "cat1", name: "Lubimyi zhanm", phoneNumber: "0(771)-007-285"),
+            Contact(imageContact: "cat6", name: "Lubimyi zhanm", phoneNumber: "0(771)-007-285"),
             Contact(imageContact: "cat2", name: "Adelya Mochalka", phoneNumber: "+996(998)-300-670"),
             Contact(imageContact: "cat3", name: "Aizhan Chernyi niger", phoneNumber: "+996(556)-450-120"),
             Contact(imageContact: "cat4", name: "Dastan dd", phoneNumber: "0(551)-306-050"),
             Contact(imageContact: "cat5", name: "Kraska dlya volos", phoneNumber: "+996(770)-427-912"),
-            Contact(imageContact: "cat6", name: "Elitnaya 999", phoneNumber: "+996(557)-967-099"),
+            Contact(imageContact: "cat1", name: "Elitnaya 999", phoneNumber: "+996(557)-967-099"),
             Contact(imageContact: "cat7", name: "Altuha", phoneNumber: "0(555)-655-001"),
             Contact(imageContact: "cat8", name: "Iphone tualet", phoneNumber: "+996(554)-215-773"),
             Contact(imageContact: "cat9", name: "Otdai naushniki", phoneNumber: "+996(550)-100-027"),
-            Contact(imageContact: "dwyane johnson", name: "Halyava cringe", phoneNumber: "+996(707)-844-411")
+            Contact(imageContact: "dwyane johnson", name: "Halyava cringe", phoneNumber: "+996(707)-844-411"),
+            Contact(imageContact: "tobacco_vanile", name: "Polo assn", phoneNumber: "+996(706)-510-998")
         ]
     }
     

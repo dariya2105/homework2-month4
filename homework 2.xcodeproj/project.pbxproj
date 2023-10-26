@@ -58,12 +58,10 @@
 		CE19503A2AE917E00049051D /* homework 2 */ = {
 			isa = PBXGroup;
 			children = (
-				CE1950522AE986040049051D /* Model */,
 				CE1950512AE985D80049051D /* Controllers */,
-				CE19503B2AE917E00049051D /* AppDelegate.swift */,
-				CE19503D2AE917E00049051D /* SceneDelegate.swift */,
-				CE1950442AE917E40049051D /* Assets.xcassets */,
-				CE1950462AE917E40049051D /* LaunchScreen.storyboard */,
+				CE1950522AE986040049051D /* Model */,
+				CE1950572AEA53AB0049051D /* Instruments */,
+				CE1950582AEA53E20049051D /* Resources */,
 				CE1950492AE917E40049051D /* Info.plist */,
 			);
 			path = "homework 2";
@@ -84,6 +82,24 @@
 				CE1950552AE986A80049051D /* ContactList.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CE1950572AEA53AB0049051D /* Instruments */ = {
+			isa = PBXGroup;
+			children = (
+				CE19503B2AE917E00049051D /* AppDelegate.swift */,
+				CE19503D2AE917E00049051D /* SceneDelegate.swift */,
+			);
+			path = Instruments;
+			sourceTree = "<group>";
+		};
+		CE1950582AEA53E20049051D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE1950442AE917E40049051D /* Assets.xcassets */,
+				CE1950462AE917E40049051D /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
